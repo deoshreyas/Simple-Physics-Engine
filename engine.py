@@ -14,10 +14,12 @@ def compute_length(vector):
     return sqrt(x**2 + y**2)
 
 class VerletObject:
-    def __init__(self, position_current, position_old, acceleration):
+    def __init__(self, position_current, position_old, acceleration, radius, colour):
         self.position_current = position_current
         self.position_old = position_old
         self.acceleration = acceleration
+        self.radius = radius
+        self.colour = colour
     
     def updatePosition(self):
         VELOCITY = subtract_vectors(self.position_current, self.position_old)
